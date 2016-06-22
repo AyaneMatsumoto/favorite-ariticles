@@ -1,2 +1,16 @@
 <h1>TimeLine</h1>
-<%= @tweets.inspect %>
+<% @articles.each do |article| %>
+        <div>aaaaaaaaaaaaaaaaaaaaaaaa
+            <p><%= article[1] %></p>
+            <% if article[2] != "" %>
+                <img src="<%= article[2] %>">
+            <% end %>
+            <p><%= article[3] %></p>
+        </div>
+<% end %>
+
+
+
+
+<%= @articles.inspect %>
+<%= @flickrs.inspect %>
