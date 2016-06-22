@@ -1,6 +1,6 @@
 <h1>TimeLine</h1>
 <% @articles.each do |article| %>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaa
+        <div>
             <p><%= article[1] %></p>
             <% if article[2] != "" %>
                 <img src="<%= article[2] %>">
@@ -8,9 +8,3 @@
             <p><%= article[3] %></p>
         </div>
 <% end %>
-
-
-
-
-<%= @articles.inspect %>
-<%= @flickrs.inspect %>

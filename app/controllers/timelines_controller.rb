@@ -6,7 +6,6 @@ class TimelinesController < ApplicationController
     @articles = Array.new(11){ Array.new(3) }
     i = 0
     @my_twitter.client.search("fashion", result_type: "recent").take(10).each do |tweet|
-      #@articles[0].push[tweet.id,tweet.text,tweet.created_at]
       #画像付きだったら画像URIをとってくる。
       if tweet.media? then
         tweet.media.each do |media|
@@ -32,7 +31,10 @@ class TimelinesController < ApplicationController
         @articles[i] = [image.id,info.description + tag_list,url,posted]
         i=i+1
     end
-    
+    #created_atでソート
+    @articles = @articles.sort {|a, b|
+      b[3] <=> a[3]
+    }
   end #end_of_index
   
 end
