@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   
   resources :timelines
   root 'timelines#index'
+  #get 'timelines/like/:id' => 'timelines#like', as: 'like'
+  post 'timelines/like' => 'timelines#like'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

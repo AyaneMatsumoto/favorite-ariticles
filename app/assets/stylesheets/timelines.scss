@@ -1,3 +1,14 @@
 // Place all the styles related to the Timelines controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html, body{
+	position: relative;
+	overflow-x: hidden;
+	font-family: "メイリオ","小塚ゴシック Pro","イワタ中太丸ゴシック","イワタミンゴ","イワタ新ゴシックＬ";
+}
+img{
+    width:100%;
+}
+.like{
+  color:#FF69B4;
+}
