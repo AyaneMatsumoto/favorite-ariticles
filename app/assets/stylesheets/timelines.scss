@@ -4,11 +4,39 @@
 html, body{
 	position: relative;
 	overflow-x: hidden;
-	font-family: "メイリオ","小塚ゴシック Pro","イワタ中太丸ゴシック","イワタミンゴ","イワタ新ゴシックＬ";
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Roboto", "DroidSerif", "sans-serif";
+    background: #D5E0F1;   
 }
 img{
     width:100%;
 }
+h1{
+    text-align:center;
+    color:#FFF;
+}
+.box{
+    margin:3%;
+    padding-right:1%;
+    padding-left:1%;
+    border-top:1px solid #3261AB;
+    border-bottom:1px solid #3261AB;
+    background:#FFF;
+}
+.date{
+    float:left;
+    width: 79%;
+    font-size: 4vw;
+}
+.form{
+    float:left;
+    width:20%;
+}
+input[type="submit"]{
+    font-size: 9vw;
+}
 .like{
-  color:#FF69B4;
+  color:#F4D2DE;
+}
+.unlike{
+    color:#AEC1E3;
 }

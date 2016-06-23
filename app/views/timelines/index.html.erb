@@ -1,24 +1,25 @@
 <h1>Your TimeLine</h1>
 <% @articles.each do |article| %>
-        <div>
-            <h1><%= article[0] %></h1>
+        <div class="box">
             <p><%= article[1] %></p>
             <% if article[2] != "" %>
                 <img src="<%= article[2] %>">
             <% end %>
-            <p><%= article[3] %></p>
+            <p class="date"><%= article[3] %></p>
             <!--お気に入り登録・削除フォーム-->
-            <%= form_tag('/timelines/like', method: :post) do %>
-                <input type="hidden" name="data[]" value="<%= article[0] %>">
-                <input type="hidden" name="data[]"value="<%= article[1] %>">
-                <input type="hidden" name="data[]"value="<%= article[2] %>">
-                <input type="hidden" name="data[]"value="<%= article[3] %>">
-                <% if article[4]==false %>
-                    <input type="submit" value="Like" />
-                <% else %>
-                    <input type="submit" value="unLike" />
+            <div class="form">
+                <%= form_tag('/timelines/like', method: :post) do %>
+                    <input type="hidden" name="data[]" value="<%= article[0] %>">
+                    <input type="hidden" name="data[]"value="<%= article[1] %>">
+                    <input type="hidden" name="data[]"value="<%= article[2] %>">
+                    <input type="hidden" name="data[]"value="<%= article[3] %>">
+                    <% if article[4]==false %>
+                        <input type="submit" value="Like" class = "unlike" />
+                    <% else %>
+                        <input type="submit" value="Like" class = "like" />
+                    <% end %>
                 <% end %>
-            <% end %>
-            <!--お気に入り登録・削除フォーム終わり-->
+            </div><!--お気に入り登録・削除フォーム終わり-->
+            <div style="clear:both"></div>
         </div>
 <% end %>
